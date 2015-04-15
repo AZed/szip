@@ -1,0 +1,15 @@
+--- szip-2.0/examples/Makefile.in.fixes	2004-11-17 15:54:41.000000000 -0500
++++ szip-2.0/examples/Makefile.in	2005-02-20 20:22:53.000000000 -0500
+@@ -165,10 +165,10 @@
+ 
+ am_burst_szip_OBJECTS = burst_szip.$(OBJEXT)
+ burst_szip_OBJECTS = $(am_burst_szip_OBJECTS)
+-burst_szip_LDFLAGS =
++burst_szip_LDFLAGS = -lm
+ am_example_OBJECTS = example.$(OBJEXT)
+ example_OBJECTS = $(am_example_OBJECTS)
+-example_LDFLAGS =
++example_LDFLAGS = -lm
+ 
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)/src
+ depcomp = $(SHELL) $(top_srcdir)/bin/depcomp
